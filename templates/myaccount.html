@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <title>EmpowerK12</title>
+    </head>
+
+    <body id='myaccount' >
+
+        <a class="btn btn-default logout" href="{{url_for('gdisconnect')}}" role="button">Logout</a>
+        <div class="container">
+            <div id="accountDetails" class="row">
+                <div id="profilePic" class="col-md-6">
+                    <img src="{{picture}}" class="img-responsive img-rounded">
+                </div>
+                <div id="userDetails" class="col-md-6">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" class="form-control" name="name" placeholder="{{name}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="text" class="form-control" name="email" placeholder="{{email}}">
+                        </div>
+                        <button type="submit" class="btn btn-default">Save</button>
+                        <a class="btn btn-default" href="{{url_for('gdisconnect')}}" role="button">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
