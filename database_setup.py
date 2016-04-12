@@ -63,5 +63,5 @@ class OrganicUser(Base):
             'picture': self.picture
         }
 
-engine = create_engine('mysql+pymysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance')
+engine = create_engine('sqlite:///.db')
 Base.metadata.create_all(engine)
