@@ -11,130 +11,142 @@
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <title>EmpowerK12</title>
+  <title>Empower K-12</title>
 
 </head>
 
-<body id="login">
-  <div id="loginBox">
-    <h1 id="companyName">Empower K-12</h1>
-    <h4 id="tagLine">empowering young minds...</h4>
-    <!-- GOOGLE PLUS SIGN IN BUTTON-->
-    <div id="signInButton">
-      <span class="g-signin"
-        data-scope="openid email"
-        data-clientid="265966158164-jaaf3r5o9c6h88lv5crnbs8ocpa7q3kb.apps.googleusercontent.com"
-        data-redirecturi="postmessage"
-        data-accesstype="offline"
-        data-cookiepolicy="single_host_origin"
-        data-callback="signInCallback"
-        data-approvalprompt="force">
-        </span>
+<body>
+    <div id="login">
+        <h1 id="companyName">Empower K-12</h1>
+        <h4 id="tagLine">~empowering young minds~</h4>
+        <!-- GOOGLE PLUS SIGN IN BUTTON-->
+        <div id="signInButton">
+          <span class="g-signin"
+            data-scope="openid email"
+            data-clientid="265966158164-jaaf3r5o9c6h88lv5crnbs8ocpa7q3kb.apps.googleusercontent.com"
+            data-redirecturi="postmessage"
+            data-accesstype="offline"
+            data-cookiepolicy="single_host_origin"
+            data-callback="signInCallback"
+            data-approvalprompt="force">
+            </span>
+        </div>
+        <!--END GOOGLE PLUS SIGN IN BUTTON -->
+        <!--Loading icon -->
+        <div id="loaderIcon">
+          <img id="loaderImage" src="static/loader_icon.gif">
+        </div>
+        <!-- End of loading icon -->
     </div>
-    <!--END GOOGLE PLUS SIGN IN BUTTON -->
-    <!--Loading icon -->
-    <div id="loaderIcon">
-      <img id="loaderImage" src="static/loader_icon.gif">
-    </div>
-    <!-- End of loading icon -->
+
+  <div id="result"></div>
   </div>
 
-<div id="result"></div>
+  <div id="vision" class="container">
+      <div class="lead" id="visionText">
+        <h3> Our Vision</h3>
+        <p>I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+      </div>
+  </div>
 
-<!-- Modal to display when user is unauthorrized-->
-<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Oops!</h4>
-      </div>
-      <div class="modal-body">
-        Hi. We are sorry but you are unauthorized to login into our web portal. For any assistance, please email us at empowerk12@gmail.com. Have a nice day. :)
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  <div id="footer">
+      Contact us : info@empowerk12.com
+  </div>
+
+  <!-- Modal to display when user is unauthorrized-->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Oops!</h4>
+        </div>
+        <div class="modal-body">
+          Hi. We are sorry but you are unauthorized to login into our web portal. For any assistance, please email us at empowerk12@gmail.com. Have a nice day. :)
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Model ends -->
+  <!-- Model ends -->
 
-<script type="text/javascript">
-  $('#loaderIcon').attr('style', 'display: none'); //not to display loader icon when page loads
-  $('#modal1').modal({ show: false}) //to set show property of modal manual
-</script>
+  <script type="text/javascript">
+    $('#loaderIcon').attr('style', 'display: none'); //not to display loader icon when page loads
+    $('#modal1').modal({ show: false}) //to set show property of modal manual
+  </script>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-  function signInCallback(authResult){
-    console.log(authResult);
-    if (authResult['code']) {
+    function signInCallback(authResult){
       console.log(authResult);
-      console.log("blah2")
-        // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main memoryvideos page
-        $('#signInButton').attr('style', 'display: none');
-        $('#loaderIcon').attr('style', 'width: 100vw');
-        $('#loaderIcon').attr('style', 'height: 40vh');
-        $('#loaderIcon').attr('style', 'display: visible');
+      if (authResult['code']) {
+        console.log(authResult);
+        console.log("blah2")
+          // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main memoryvideos page
+          $('#signInButton').attr('style', 'display: none');
+          $('#loaderIcon').attr('style', 'width: 100vw');
+          $('#loaderIcon').attr('style', 'height: 40vh');
+          $('#loaderIcon').attr('style', 'display: visible');
 
-        $.ajax({
-          type: 'POST',
-          url: '/gconnect?state={{STATE}}',
-          processData: false,
-          data: authResult['code'],
-          contentType: 'application/octet-stream; charset=utf-8',
-          dataType: 'json',
-          statusCode: {
-            200: function(response){
-              console.log("printing response:")
-              console.log(response);
-              // Hide the sign-in button now that the user is authorized
-              // $('#signInButton').attr('style', 'display: none');
-              // console.log("Login successful!");
-              // output = '';
-              // output += '<h1>Welcome, ';
-              // output += response['username'];
-              // output += '!</h1>';
-              // output += '<img src="';
-              // output += response['image_source'];
-              // output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> ';
+          $.ajax({
+            type: 'POST',
+            url: '/gconnect?state={{STATE}}',
+            processData: false,
+            data: authResult['code'],
+            contentType: 'application/octet-stream; charset=utf-8',
+            dataType: 'json',
+            statusCode: {
+              200: function(response){
+                console.log("printing response:")
+                console.log(response);
+                // Hide the sign-in button now that the user is authorized
+                // $('#signInButton').attr('style', 'display: none');
+                // console.log("Login successful!");
+                // output = '';
+                // output += '<h1>Welcome, ';
+                // output += response['username'];
+                // output += '!</h1>';
+                // output += '<img src="';
+                // output += response['image_source'];
+                // output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> ';
 
-              // console.log(output);
+                // console.log(output);
 
-              // $('#result').html('Login Successful!</br>'+ output + '</br>Redirecting...')
-              //setTimeout(function() {window.location.href = "/memoryvideos";}, 4000);
-              window.location.href = "/memoryvideos";
-            },
-            201: function(response) {
-              console.log(response);
-              // Hide the sign-in button now that the user is authorized
-              // $('#signInButton').attr('style', 'display: none');
-              // $('#result').html('Login Successful!</br>'+ response + '</br>Redirecting...');
-              //setTimeout(function() {window.location.href = "/memoryvideos";}, 4000);
-              window.location.href = "/memoryvideos";
-            },
-            401: function(response) {
-              console.log(response);
-              // Hide the sign-in button now that the user is authorized
-              //$('#signInButton').attr('style', 'display: none');
-              //$('#result').html(response['responseText'])
-              $('#modal1').modal('show');
-              $('#signInButton').attr('style', 'display: visible');
-              $('#loaderIcon').attr('style', 'display: none');
+                // $('#result').html('Login Successful!</br>'+ output + '</br>Redirecting...')
+                //setTimeout(function() {window.location.href = "/memoryvideos";}, 4000);
+                window.location.href = "/memoryvideos";
+              },
+              201: function(response) {
+                console.log(response);
+                // Hide the sign-in button now that the user is authorized
+                // $('#signInButton').attr('style', 'display: none');
+                // $('#result').html('Login Successful!</br>'+ response + '</br>Redirecting...');
+                //setTimeout(function() {window.location.href = "/memoryvideos";}, 4000);
+                window.location.href = "/memoryvideos";
+              },
+              401: function(response) {
+                console.log(response);
+                // Hide the sign-in button now that the user is authorized
+                //$('#signInButton').attr('style', 'display: none');
+                //$('#result').html(response['responseText'])
+                $('#modal1').modal('show');
+                $('#signInButton').attr('style', 'display: visible');
+                $('#loaderIcon').attr('style', 'display: none');
+              }
             }
-          }
-        });
+          });
+      }
+      else if (authResult['error']) {
+          $('#result').html(result)
+          console.log('There was an error: ' + authResult['error']);
+      }
+      else {
+          $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+      }
     }
-    else if (authResult['error']) {
-        $('#result').html(result)
-        console.log('There was an error: ' + authResult['error']);
-    }
-    else {
-        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
-    }
-  }
 
-</script>
+  </script>
 </body>
 
 </html>

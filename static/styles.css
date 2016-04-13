@@ -8,23 +8,50 @@
 }
 
 /*Login styling starts*/
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
 #login{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('background_image3.png');
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100vw 100vh;
-    background-image: url("background_image.jpg");
-    background-repeat: no-repeat;
+}
+
+#vision{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+#visionText{
+    padding : 18%;
+    text-align: center;
+}
+
+#footer{
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 2%;
+    position: absolute;
 }
 
 #companyName{
     width: 100vw;
-    height: 40vh;
+    height: 45vh;
     display: table-cell;
     vertical-align: bottom;
     font-size: 8vw;
     text-align: center;
+    color: white;
 }
 
 #signInButton{
