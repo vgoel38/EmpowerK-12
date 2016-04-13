@@ -7,11 +7,26 @@
     outline: 1px solid red !important;*/
 }
 
-/*Login styling starts*/
-
 body::-webkit-scrollbar{
     display: none;
 }
+
+#bootstrapOverridenNavBar{
+  margin:0;
+  background-color: #00a087;
+}
+
+#footer{
+    width: 100vw;
+    height: 50px;
+    color: gray;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    /*position: absolute;*/
+}
+
+/*Login styling starts*/
 
 #login{
     width: 100vw;
@@ -21,27 +36,8 @@ body::-webkit-scrollbar{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-}
-
-#vision{
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-}
-
-#visionText{
-    padding : 18%;
-    text-align: center;
-}
-
-#footer{
-    width: 100vw;
-    height: 10vh;
-    color: white;
-    background-color: black;
-    text-align: center;
-    padding: 2%;
-    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #companyName{
@@ -52,21 +48,29 @@ body::-webkit-scrollbar{
     font-size: 8vw;
     text-align: center;
     color: white;
-}
-
-#signInButton{
-    width: 100vw;
-    height: 40vh;
-    width: 100vw;
-    text-align: center;
-    padding: 1%;
+    text-shadow: #000 3px 2px 2px;
 }
 
 #tagLine{
     text-align: center;
     font-size: 2vw;
     color: #ADD8E6;
-    text-shadow: #000 0px 0px 1px;
+    text-shadow: #000 3px 2px 2px;
+}
+
+#signInButton{
+    text-align: center;
+    padding: 1%;
+}
+
+#vision{
+    width: 100vw;
+    background-color: white;
+}
+
+#visionText{
+    padding: 18%;
+    text-align: center;
 }
 
 #loaderImage{
@@ -83,25 +87,16 @@ body::-webkit-scrollbar{
 
 /*MyAccount styling starts*/
 #myaccount{
+
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     width:100vw;
     height:100vh;
-    /*background-size: 100vw 100;*/
-    background-image: url("background_image2.jpg");
+    background-size: 100vw 100vh;
+    background-image: url("background_image2.png");
     background-repeat: no-repeat;
-}
-
-.logout{
-    right: 0;
-    position: absolute;
-    margin: 1%;
-}
-
-.container{
-    height: 100%;
 }
 
 #accountDetails{
@@ -109,14 +104,26 @@ body::-webkit-scrollbar{
     padding: 2%;
 }
 
+#accountDetails h1{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 51px;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+    text-shadow: #000 3px 2px 2px;
+}
+
 #profilePic{
     height: 100%;
 }
 
 #profilePic img{
-    height:500px;
+    height:400px;
     float: right;
-    padding-top: 30%;
+    padding-top: 10%;
 }
 
 #userDetails{
@@ -124,7 +131,7 @@ body::-webkit-scrollbar{
 }
 
 #userDetails form{
-    padding-top: 40%;
+    padding-top: 20%;
     width: 50%;
 }
 
@@ -156,8 +163,54 @@ body::-webkit-scrollbar{
     }
 }
 
+/*MyAccount styling ends*/
 
+/*Course styling starts*/
 
+#memoryTitle{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 51px;
+    padding: 2%;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
+    color: black;/*
+    text-shadow: #000 3px 2px 2px;*/
+}
 
+#memoryVideos .row{
+
+}
+
+.rowTop{
+    margin-top: 5%;
+}
+
+.iframeLeft{
+    width:300px;
+    height:200px;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.iframeRight{
+    width:300px;
+    height:200px;
+    margin-left: 5%;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: right;
+}
+
+.rowBottom{
+    margin-bottom: 5%;
+}
+
+/*Course styling ends*/
 
 

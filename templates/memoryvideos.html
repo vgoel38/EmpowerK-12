@@ -2,16 +2,71 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width initial-scale=1">
-        <title></title>
-        <link rel="stylesheet" href="">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <title>EmpowerK12</title>
     </head>
 
-    <body>
-        <div class='logout'><a href="#">Logout</a></div>
-        <div class='myaccount'><a href="/myaccount">My Account</a></div>
-        <h1>Memory videos</h1>
-        <!-- <iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"/> -->
-    </body>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/login">Empower K-12</a>
+                <!-- <a class="navbar-brand" href="#">
+                    <img src="http://placehold.it/150x50&text=Logo" alt="">
+                </a> -->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+            <li><a href="/myaccount">My Account</a></li>
+            <li><a href="/gdisconnect">Logout</a></li>
+          </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div id="memoryTitle">
+        <h1>Memorization Techniques</h1>
+    </div>
+
+    <div class="container lead" id="memoryDescription">
+        <p>I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+    </div>
+
+    <a  href="../static/amy.pdf" download>Download pdf</a>
+
+    <div id="memoryVideos" class="container">
+        <div class="row rowTop" >
+            <iframe class="iframeLeft" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0"></iframe>
+            <iframe class="iframeRight" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0"></iframe>
+        </div>
+        <div class="row">
+            <iframe class="iframeLeft" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0"></iframe>
+            <iframe class="iframeRight" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0"></iframe>
+        </div>
+        <div class="row rowBottom">
+            <iframe class="iframeLeft" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0"></iframe>
+            <iframe class="iframeRight" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0"></iframe>
+        </div>
+    </div>
+
+    <div id="footer">
+      Contact us : info@empowerk12.com
+    </div>
+
+</body>
 </html>
