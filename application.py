@@ -15,8 +15,10 @@ from flask import make_response
 import requests
 
 application = Flask(__name__)
+DB='sqlite:///users.db'
+DB='mysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance'
 
-engine = create_engine('sqlite:///users.db')
+engine = create_engine(DB)
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -245,6 +247,6 @@ def showMemoryVideos():
 
 
 if __name__ == '__main__':
-    application.secret_key = 'super_secret_key'
+    # application.secret_key = 'super_secret_key'
     application.debug = True
-    application.run(host='0.0.0.0', port=5000)
+    # application.run(host='0.0.0.0', port=5000)
