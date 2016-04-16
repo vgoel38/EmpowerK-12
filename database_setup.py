@@ -4,6 +4,8 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
 Base = declarative_base()
+#DB='sqlite:///users.db'
+DB='mysql+pymysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance'
 
 class Institution(Base):
     __tablename__ = 'institution'
@@ -63,5 +65,5 @@ class OrganicUser(Base):
             'picture': self.picture
         }
 
-engine = create_engine('sqlite:///.db')
+engine = create_engine(DB)
 Base.metadata.create_all(engine)
