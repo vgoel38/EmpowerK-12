@@ -17,4 +17,4 @@ if __name__ == "__main__":
     # removed before deploying a production app.
     application.secret_key = 'super_secret_key'
     application.debug = True
-    application.run('0.0.0.0')
+    application.run()
