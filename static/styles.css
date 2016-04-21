@@ -31,7 +31,8 @@ body::-webkit-scrollbar{
 #login{
     width: 100vw;
     height: 100vh;
-    background-image: url('background_image3.png');
+    /*background-image: url('background_image3.png');*/
+    background-image: url('background_image.jpg');
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -47,7 +48,8 @@ body::-webkit-scrollbar{
     vertical-align: bottom;
     font-size: 8vw;
     text-align: center;
-    color: white;
+    color: #524E4E;
+    /*color: white;*/
     text-shadow: #000 3px 2px 2px;
 }
 
@@ -65,12 +67,18 @@ body::-webkit-scrollbar{
 
 #vision{
     width: 100vw;
-    background-color: white;
+    background-color: #DDE1E2;
 }
 
 #visionText{
     padding: 18%;
     text-align: center;
+    font-family: 'Poiret One', cursive;
+}
+
+#visionText h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 #loaderImage{
@@ -121,9 +129,9 @@ body::-webkit-scrollbar{
 }
 
 #profilePic img{
-    height:400px;
+    height:300px;
     float: right;
-    padding-top: 10%;
+    padding-top: 15%;
 }
 
 #userDetails{
@@ -131,7 +139,7 @@ body::-webkit-scrollbar{
 }
 
 #userDetails form{
-    padding-top: 20%;
+    padding-top: 17%;
     width: 50%;
 }
 
@@ -180,8 +188,14 @@ body::-webkit-scrollbar{
     text-shadow: #000 3px 2px 2px;*/
 }
 
-#memoryVideos .row{
+#memoryVideos {
 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 27%;
+    align-items: center;
+    align-content: center;
+    -webkit-align-content: center;
 }
 
 .rowTop{

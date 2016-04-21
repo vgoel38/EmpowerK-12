@@ -4,8 +4,8 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
 Base = declarative_base()
-#DB='sqlite:///users.db'
-DB='mysql+pymysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance'
+DB='sqlite:///users.db'
+#DB='mysql://root@127.0.0.1:3306/users'
 
 class Institution(Base):
     __tablename__ = 'institution'
