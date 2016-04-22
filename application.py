@@ -27,7 +27,7 @@ session = DBSession()
 company_name = "EmpowerK12"
 
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open('/home/vgoel38/EmpowerK-12/client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = company_name
 
 #Login Page
