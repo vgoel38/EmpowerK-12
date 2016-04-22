@@ -15,7 +15,7 @@ from flask import make_response
 import requests
 
 app = Flask(__name__)
-DB='sqlite:///users.db'
+DB='sqlite:////home/vgoel38/users.db'
 # DB='mysql+pymysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance'
 
 engine = create_engine(DB)
