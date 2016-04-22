@@ -15,6 +15,7 @@ from flask import make_response
 import requests
 
 app = Flask(__name__)
+app.secret_key = 'super_secret_key'
 DB='sqlite:////home/vgoel38/users.db'
 # DB='mysql+pymysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance'
 
@@ -247,8 +248,6 @@ def showMemoryVideos():
 @app.route('/courses')
 def showCourses():
     return render_template('courses.html')
-
-
 
 
 if __name__ == '__main__':
