@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
 Base = declarative_base()
-DB='sqlite:////home/vgoel38/users.db'
+DB='sqlite:////home/vgoel38/EmpowerK-12/users.db'
 #DB='mysql://root@127.0.0.1:3306/users'
 
 class Institution(Base):

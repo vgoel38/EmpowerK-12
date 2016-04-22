@@ -16,7 +16,7 @@ import requests
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
-DB='sqlite:////home/vgoel38/users.db'
+DB='sqlite:////home/vgoel38/EmpowerK-12/users.db'
 # DB='mysql+pymysql://db_user:qewadszcx@mydbinstance.ckce9yq27gfm.us-west-2.rds.amazonaws.com:3306/mydbinstance'
 
 engine = create_engine(DB)
@@ -55,7 +55,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets('/home/vgoel38/EmpowerK-12/client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
