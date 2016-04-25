@@ -5,6 +5,7 @@ from database_setup import Base, Institution, User, OrganicUser
 from flask import session as login_session
 import random
 import string
+import hostdetails
 
 # IMPORTS FOR THIS STEP
 from oauth2client.client import flow_from_clientsecrets
