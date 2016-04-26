@@ -1,7 +1,8 @@
 import socket,string
 host=socket.gethostbyname(socket.gethostname())
 
-if host.startswith('192.168'):
+#10.0.2.15 is my vagrant private ip address and 192.168.1.10 is my private ip address
+if host.startswith('192.168') or host.startswith('10.0.2.15'):
     host='localhost'
 else:
     host='other'
