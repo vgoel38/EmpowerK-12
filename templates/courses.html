@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <title>EmpowerK12</title>
+    </head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/login">Empower K-12</a>
+                <!-- <a class="navbar-brand" href="#">
+                    <img src="http://placehold.it/150x50&text=Logo" alt="">
+                </a> -->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+            <li><a href="/myaccount">My Account</a></li>
+            <li><a href="/gdisconnect">Logout</a></li>
+          </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div id="memoryTitle">
+        <h1>Courses</h1>
+    </div>
+
+    <div class="container lead" id="memoryDescription">
+        <p>We strive to deliver the best courses with best content. The courses have been developed with expertise and comprise hands-on approach. The courses have been tested and known to produce best results. Come, let's study together and have fun.</p>
+    </div>
+
+    <div id="courses" class="container">
+        <hr>
+        <div id="course" class="row">
+            <div class="courseImg col-md-3" ><img class="col" src="static/brain.png" width="250px" height="150px"></div>
+            <div class="coursecontent col-md-9"><h3><a href="{{url_for('showMemoryVideos')}}"> Photographic Memory Course</a></h3><p>Improve your memory with photographic memory techniques.</p></div>
+        </div>
+        <hr>
+        <div id="course" class="row">
+            <div class="courseImg col-md-3" ><img class="col" src="static/webinar.png" width="250px" height="150px"></div>
+            <div class="coursecontent col-md-9"><h3>Webinars</h3><p>Take webinars right from your home or while commuting.</p></div>
+        </div>
+        <hr>
+        <div id="course" class="row">
+            <div class="courseImg col-md-3" ><img class="col" src="static/android.jpg" width="250px" height="150px"></div>
+            <div class="coursecontent col-md-9"><h3>Android apps and games Deveopment Course</h3><p>Develop android apps and games in this incredible mobile app dvelopment course.</p></div>
+        </div>
+        <hr>
+    </div>
+
+
+
+    <div id="footer">
+      Contact us : info@empowerk12.com
+    </div>
+
+</body>
+</html>

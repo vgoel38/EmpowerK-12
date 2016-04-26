@@ -7,39 +7,78 @@
     outline: 1px solid red !important;*/
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#bootstrapOverridenNavBar{
+  margin:0;
+  background-color: #00a087;
+}
+
+#footer{
+    width: 100vw;
+    height: 50px;
+    color: gray;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    /*position: absolute;*/
+}
+
 /*Login styling starts*/
+
 #login{
+    width: 100vw;
+    height: 100vh;
+    /*background-image: url('background_image3.png');*/
+    background-image: url('background_image.jpg');
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100vw 100vh;
-    background-image: url("background_image.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 #companyName{
     width: 100vw;
-    height: 40vh;
+    height: 45vh;
     display: table-cell;
     vertical-align: bottom;
     font-size: 8vw;
     text-align: center;
-}
-
-#signInButton{
-    width: 100vw;
-    height: 40vh;
-    width: 100vw;
-    text-align: center;
-    padding: 1%;
+    color: #524E4E;
+    /*color: white;*/
+    text-shadow: #000 3px 2px 2px;
 }
 
 #tagLine{
     text-align: center;
     font-size: 2vw;
     color: #ADD8E6;
-    text-shadow: #000 0px 0px 1px;
+    text-shadow: #000 3px 2px 2px;
+}
+
+#signInButton{
+    text-align: center;
+    padding: 1%;
+}
+
+#vision{
+    width: 100vw;
+    background-color: #DDE1E2;
+}
+
+#visionText{
+    padding: 18%;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+}
+
+#visionText h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 #loaderImage{
@@ -56,25 +95,16 @@
 
 /*MyAccount styling starts*/
 #myaccount{
+
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     width:100vw;
     height:100vh;
-    /*background-size: 100vw 100;*/
-    background-image: url("background_image2.jpg");
+    background-size: 100vw 100vh;
+    background-image: url("background_image2.png");
     background-repeat: no-repeat;
-}
-
-.logout{
-    right: 0;
-    position: absolute;
-    margin: 1%;
-}
-
-.container{
-    height: 100%;
 }
 
 #accountDetails{
@@ -82,14 +112,26 @@
     padding: 2%;
 }
 
+#accountDetails h1{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 51px;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+    text-shadow: #000 3px 2px 2px;
+}
+
 #profilePic{
     height: 100%;
 }
 
 #profilePic img{
-    height:500px;
+    height:300px;
     float: right;
-    padding-top: 30%;
+    padding-top: 15%;
 }
 
 #userDetails{
@@ -97,7 +139,7 @@
 }
 
 #userDetails form{
-    padding-top: 40%;
+    padding-top: 17%;
     width: 50%;
 }
 
@@ -129,8 +171,113 @@
     }
 }
 
+/*MyAccount styling ends*/
 
+/*Course styling starts*/
 
+#memoryTitle{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 51px;
+    padding: 2%;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
+    color: black;/*
+    text-shadow: #000 3px 2px 2px;*/
+}
 
+#memoryVideos {
 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /*margin-left: 27%;*/
+    align-items: center;
+    align-content: center;
+    -webkit-align-content: center;
+}
+
+.rowTop{
+    margin-top: 5%;
+}
+
+.iframeLeft{
+    width:300px;
+    height:200px;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.iframeRight{
+    width:300px;
+    height:200px;
+    margin-left: 5%;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: right;
+}
+
+.rowBottom{
+    margin-bottom: 5%;
+}
+
+/*Course styling ends*/
+
+/*21 days worksop styling begins*/
+
+#memoryworkshop{
+    padding-left:20%;
+    padding-right:20%;
+}
+
+#memoryworkshop .row{
+    margin:3px;
+}
+
+#memoryWorkshopDay{
+    height: 200px;
+    padding:10px;
+}
+
+#memoryWorkshopDay h2{
+    margin-top: 30%;
+    margin-left: 30%;
+}
+#memoryWorkshopDay img{
+    margin-left: 45%;
+}
+
+/*21 days worksop styling ends*/
+
+/*webinars styling beings*/
+
+#webinars{
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    border: 20px solid #8B480B;
+}
+
+#webinars h2{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#webinar{
+    padding: 3%;
+}
+
+#webinar img{
+    width: 200px;
+    height: 200px;
+}
+
+/*webinars styling ends*/
 

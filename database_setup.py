@@ -2,8 +2,11 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
+from hostdetails import host, path_to_repo
 
 Base = declarative_base()
+DB='sqlite:///'+path_to_repo+'users.db'
+#DB='mysql://root@127.0.0.1:3306/users'
 
 class Institution(Base):
     __tablename__ = 'institution'
@@ -63,5 +66,5 @@ class OrganicUser(Base):
             'picture': self.picture
         }
 
-engine = create_engine('sqlite:///users.db')
+engine = create_engine(DB)
 Base.metadata.create_all(engine)

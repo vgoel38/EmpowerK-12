@@ -1,12 +1,10 @@
+#importing from foreign libraries
 from flask import Flask, render_template, request, redirect, jsonify, url_for, flash
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Institution, User, OrganicUser
 from flask import session as login_session
 import random
 import string
-
-# IMPORTS FOR THIS STEP
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 import httplib2
@@ -14,18 +12,24 @@ import json
 from flask import make_response
 import requests
 
+#importing from my own files
+from database_setup import Base, Institution, User, OrganicUser
+from hostdetails import host, path_to_repo
+
 app = Flask(__name__)
+app.secret_key = 'super_secret_key'
 
-engine = create_engine('sqlite:///users.db')
+#attaching to DB
+DB= 'sqlite:///'+path_to_repo+'users.db'
+engine = create_engine(DB)
 Base.metadata.bind = engine
-
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 company_name = "EmpowerK12"
 
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open(path_to_repo+'client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = company_name
 
 #Login Page
@@ -52,7 +56,8 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        #oauth_flow = flow_from_clientsecrets('/home/vgoel38/EmpowerK-12/client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets(path_to_repo+'client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
@@ -139,7 +144,6 @@ def gconnect():
     return response
 
 # User Helper Functions
-
 def createOrganicUser(login_session):
     newUser = OrganicUser(name=login_session['username'], email=login_session[
                    'email'], picture=login_session['picture'])
@@ -189,6 +193,7 @@ def deleteSessionDetails():
     print "result status is" + result['status']
 
     return result['status']
+
 
 @app.route('/gdisconnect')
 def gdisconnect():
@@ -242,9 +247,23 @@ def showMemoryVideos():
     return render_template('memoryvideos.html')
 
 
+#All courses
+@app.route('/courses')
+def showCourses():
+    return render_template('courses.html')
+
+#Memory Workshop
+@app.route('/memoryworkshop')
+def showMemoryWorkshop():
+    return render_template('memoryworkshop.html')
+
+#webinars
+@app.route('/webinars')
+def showWebinars():
+    return render_template('webinars.html')
 
 
 if __name__ == '__main__':
-    app.secret_key = 'super_secret_key'
     app.debug = True
-    app.run(host='0.0.0.0', port=5000)
+    if host == 'localhost':
+        app.run(host='0.0.0.0', port=5000)
