@@ -2,8 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from database_setup import Base, Institution, User, OrganicUser
+from hostdetails import host, path_to_repo
 
-engine = create_engine('sqlite:///users.db')
+engine = create_engine('sqlite:///'+path_to_repo+'users.db')
 # Bind the engine to the metadata of the Base class so that the
 # declaratives can be accessed through a DBSession instance
 Base.metadata.bind = engine
@@ -25,3 +26,8 @@ session.commit()
 User1 = User(email="vgoel38@gmail.com")
 session.add(User1)
 session.commit()
+
+# user = session.query(User).all()
+# for u in user:
+#      session.delete(u)
+# session.commit()

@@ -2,9 +2,10 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
+from hostdetails import host, path_to_repo
 
 Base = declarative_base()
-DB='sqlite:////home/vgoel38/EmpowerK-12/users.db'
+DB='sqlite:///'+path_to_repo+'users.db'
 #DB='mysql://root@127.0.0.1:3306/users'
 
 class Institution(Base):

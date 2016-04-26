@@ -192,7 +192,7 @@ body::-webkit-scrollbar{
 
     margin-top: 5%;
     margin-bottom: 5%;
-    margin-left: 27%;
+    /*margin-left: 27%;*/
     align-items: center;
     align-content: center;
     -webkit-align-content: center;
@@ -227,4 +227,57 @@ body::-webkit-scrollbar{
 
 /*Course styling ends*/
 
+/*21 days worksop styling begins*/
+
+#memoryworkshop{
+    padding-left:20%;
+    padding-right:20%;
+}
+
+#memoryworkshop .row{
+    margin:3px;
+}
+
+#memoryWorkshopDay{
+    height: 200px;
+    padding:10px;
+}
+
+#memoryWorkshopDay h2{
+    margin-top: 30%;
+    margin-left: 30%;
+}
+#memoryWorkshopDay img{
+    margin-left: 45%;
+}
+
+/*21 days worksop styling ends*/
+
+/*webinars styling beings*/
+
+#webinars{
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    border: 20px solid #8B480B;
+}
+
+#webinars h2{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#webinar{
+    padding: 3%;
+}
+
+#webinar img{
+    width: 200px;
+    height: 200px;
+}
+
+/*webinars styling ends*/
 
