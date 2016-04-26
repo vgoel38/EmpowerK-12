@@ -238,28 +238,38 @@ def userUnautorizedAccess():
 #User Account Details
 @app.route('/myaccount')
 def showAccountDetails():
+    if 'username' not in login_session:
+        return redirect('/login')
     return render_template('myaccount.html', name=login_session['username'], picture=login_session['picture'], email=login_session['email'])
 
 
 #Memory Videos
 @app.route('/memoryvideos')
 def showMemoryVideos():
+    if 'username' not in login_session:
+        return redirect('/login')
     return render_template('memoryvideos.html')
 
 
 #All courses
 @app.route('/courses')
 def showCourses():
+    if 'username' not in login_session:
+        return redirect('/login')
     return render_template('courses.html')
 
 #Memory Workshop
 @app.route('/memoryworkshop')
 def showMemoryWorkshop():
+    if 'username' not in login_session:
+        return redirect('/login')
     return render_template('memoryworkshop.html')
 
 #webinars
 @app.route('/webinars')
 def showWebinars():
+    if 'username' not in login_session:
+        return redirect('/login')
     return render_template('webinars.html')
 
 

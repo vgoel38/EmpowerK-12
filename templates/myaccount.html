@@ -31,7 +31,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/memoryvideos">Memory Videos</a></li>
+                    <li><a href="/courses">Courses</a></li>
+                    <li><a href="/myaccount">My Account</a></li>
                     <li><a href="/gdisconnect">Logout</a></li>
                   </ul>
                     </div>
@@ -41,7 +42,7 @@
         </nav>
 
         <div id="accountDetails">
-            <h1>My Account</h1>
+            <h1>Hi, {{name}}!</h1>
             <div class="container">
                 <div class="row">
                     <div id="profilePic" class="col-md-6">
@@ -50,11 +51,11 @@
                     <div id="userDetails" class="col-md-6">
                         <form action="#" method="POST">
                             <div class="form-group">
-                                <label>Name:</label>
+                                <label>Name* :</label>
                                 <input type="text" class="form-control" name="name" placeholder="{{name}}">
                             </div>
                             <div class="form-group">
-                                <label>Email:</label>
+                                <label>Email* :</label>
                                 <input type="text" class="form-control" name="email" placeholder="{{email}}">
                             </div>
                             <button type="submit" class="btn btn-default">Save</button>
@@ -63,11 +64,125 @@
                     </div>
                 </div>
             </div>
+            <hr>
+            <div class="container">
+                <div id="otherUserDetails">
+                    <form action="#" method="POST">
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Nickname :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="what do they call you? :P">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Birthdate :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="dd/mm/yyyy">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">School/Institute :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="your school/institute">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">School/Institute Address :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="Type your school/Institute address with state and pincode">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Current Grade :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="Example: 8th">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Home address :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="Type your home address here">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">State :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="Your state">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Pincode :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="XXXXXX">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Mobile :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="your 10-digit number">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Landline :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="name" placeholder="with std code">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">About me :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <textarea class="form-control" style="width: 50%; height: 150px" type="text" name="name" placeholder="Write about yourself here. Max 200 words."></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label style="float: right;">Favourite Quote :</label>
+                            </div>
+                            <div class="col-md-6">
+                                <textarea class="form-control" style="width: 40%; height: 100px" type="text" name="name" placeholder="What is your favourite quote? This will show up in forum beside your name. :)"></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-default">Save</button>
+                                <a class="btn btn-default" href="{{url_for('gdisconnect')}}" role="button">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div id="footer">
+    <div id="footer">
           Contact us : info@empowerk12.com
-        </div>
     </div>
 
 </body>

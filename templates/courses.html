@@ -30,6 +30,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+            <li><a href="/courses">Courses</a></li>
             <li><a href="/myaccount">My Account</a></li>
             <li><a href="/gdisconnect">Logout</a></li>
           </ul>
@@ -39,12 +40,16 @@
         <!-- /.container -->
     </nav>
 
-    <div id="memoryTitle">
-        <h1>Courses</h1>
+    <div style="background-image: url('static/courses.jpg'); width: 100%; height: 400px;">
     </div>
 
-    <div class="container lead" id="memoryDescription">
-        <p>We strive to deliver the best courses with best content. The courses have been developed with expertise and comprise hands-on approach. The courses have been tested and known to produce best results. Come, let's study together and have fun.</p>
+    <div class="container">
+        <div id="pageTitle">
+            <h1>Courses</h1>
+        </div>
+        <div class="container lead" id="pageDescription">
+            <p>We strive to deliver the best courses with best content. The courses have been developed with expertise and comprise hands-on approach. The courses have been tested and known to produce best results. Come, let's study together and have fun.</p>
+        </div>
     </div>
 
     <div id="courses" class="container">
@@ -56,12 +61,12 @@
         <hr>
         <div id="course" class="row">
             <div class="courseImg col-md-3" ><img class="col" src="static/webinar.png" width="250px" height="150px"></div>
-            <div class="coursecontent col-md-9"><h3>Webinars</h3><p>Take webinars right from your home or while commuting.</p></div>
+            <div class="coursecontent col-md-9"><h3><a href="{{url_for('showWebinars')}}">Webinars</a></h3><p>Take webinars right from your home or while commuting.</p></div>
         </div>
         <hr>
         <div id="course" class="row">
             <div class="courseImg col-md-3" ><img class="col" src="static/android.jpg" width="250px" height="150px"></div>
-            <div class="coursecontent col-md-9"><h3>Android apps and games Deveopment Course</h3><p>Develop android apps and games in this incredible mobile app dvelopment course.</p></div>
+            <div class="coursecontent col-md-9"><h3><a href="#">Android apps and games Deveopment Course</a></h3><p>Develop android apps and games in this incredible mobile app dvelopment course.</p></div>
         </div>
         <hr>
     </div>

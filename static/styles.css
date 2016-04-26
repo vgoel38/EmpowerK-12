@@ -23,7 +23,24 @@ body::-webkit-scrollbar{
     background-color: black;
     text-align: center;
     padding: 15px;
-    /*position: absolute;*/
+    /*position: relative;*/
+}
+
+#pageTitle{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 20px;
+    padding: 2%;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
+    color: black;/*
+    text-shadow: #000 3px 2px 2px;*/
+}
+
+#pageDescription{
+    margin-bottom: 30px;
 }
 
 /*Login styling starts*/
@@ -48,9 +65,9 @@ body::-webkit-scrollbar{
     vertical-align: bottom;
     font-size: 8vw;
     text-align: center;
-    color: #524E4E;
+    /*color: #524E4E;*/
     /*color: white;*/
-    text-shadow: #000 3px 2px 2px;
+    /*text-shadow: #000 3px 2px 2px;*/
 }
 
 #tagLine{
@@ -67,13 +84,13 @@ body::-webkit-scrollbar{
 
 #vision{
     width: 100vw;
-    background-color: #DDE1E2;
+    /*background-color: #DDE1E2;*/
 }
 
 #visionText{
     padding: 18%;
     text-align: center;
-    font-family: 'Poiret One', cursive;
+    font-family: 'Poiret One';
 }
 
 #visionText h3{
@@ -101,8 +118,8 @@ body::-webkit-scrollbar{
     -moz-background-size: cover;
     -o-background-size: cover;
     width:100vw;
-    height:100vh;
-    background-size: 100vw 100vh;
+    /*height:100vh;*/
+    /*background-size: 100vw 100vh;*/
     background-image: url("background_image2.png");
     background-repeat: no-repeat;
 }
@@ -115,7 +132,8 @@ body::-webkit-scrollbar{
 #accountDetails h1{
     /*width: 100vw;
     height: 45vh;*/
-    margin: 51px;
+    margin-top: 51px;
+    margin-bottom: 10px;
     /*display: table-cell;*/
     vertical-align: bottom;
     font-size: 4vw;
@@ -141,6 +159,10 @@ body::-webkit-scrollbar{
 #userDetails form{
     padding-top: 17%;
     width: 50%;
+}
+
+#otherUserDetails input{
+    width: 40%;
 }
 
 @media screen and (max-width: 992px)
@@ -184,8 +206,13 @@ body::-webkit-scrollbar{
     vertical-align: bottom;
     font-size: 4vw;
     text-align: center;
-    color: black;/*
-    text-shadow: #000 3px 2px 2px;*/
+    color: white;
+    text-shadow: #000 3px 2px 2px;
+}
+
+#memoryDescription{
+    color: white;
+    text-shadow: #000 3px 2px 2px;
 }
 
 #memoryVideos {
@@ -229,6 +256,17 @@ body::-webkit-scrollbar{
 
 /*21 days worksop styling begins*/
 
+#memoryWorkshopTitle{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 51px;
+    padding: 2%;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
+}
+
 #memoryworkshop{
     padding-left:20%;
     padding-right:20%;
@@ -261,6 +299,17 @@ body::-webkit-scrollbar{
     margin-bottom: 50px;
     border-radius: 25px;
     border: 20px solid #8B480B;
+}
+
+#webinarTitle{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 51px;
+    padding: 2%;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 4vw;
+    text-align: center;
 }
 
 #webinars h2{

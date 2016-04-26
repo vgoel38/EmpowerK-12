@@ -19,11 +19,11 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
 
-Institution1 = Institution(name="Ramjas School", address="Anand Parbat")
-session.add(Institution1)
-session.commit()
+# Institution1 = Institution(name="Ramjas School", address="Anand Parbat")
+# session.add(Institution1)
+# session.commit()
 
-User1 = User(email="vgoel38@gmail.com")
+User1 = User(email="mehrotra93vivek@gmail.com")
 session.add(User1)
 session.commit()
 
