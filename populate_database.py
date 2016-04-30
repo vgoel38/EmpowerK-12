@@ -23,7 +23,7 @@ session = DBSession()
 # session.add(Institution1)
 # session.commit()
 
-User1 = User(email="harshita.r17@gmail.com")
+User1 = User(email="harshita.r17@mhrod.in")
 session.add(User1)
 session.commit()
 
