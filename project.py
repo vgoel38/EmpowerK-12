@@ -244,11 +244,11 @@ def showAccountDetails():
 
 
 #Memory Videos
-@app.route('/memoryvideos')
+@app.route('/memory')
 def showMemoryVideos():
     if 'username' not in login_session:
         return redirect('/login')
-    return render_template('memoryvideos.html')
+    return render_template('memory.html')
 
 
 #All courses
