@@ -61,6 +61,12 @@
         <h2>How to memorize....</h2>
         <hr>
         <div class="row" >
+            <div class="courseImg col-md-3" ><iframe id="player" type="text/html" allowfullscreen="allowfullscreen" width="250" height="150" src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com" frameborder="0"></iframe></div>
+            <div class="coursecontent col-md-8"><h3>1. Random Objects/Items</h3></div>
+            <div class="lock col-md-1 row"><a href="static/amy.pdf" download="Random Objects/Items Test.pdf" class="col btn btn-default">Take Test</a></div>
+        </div>
+        <hr>
+        <div class="row" >
             <div class="courseImg col-md-3" ><img src="static/video-sample.jpg" width="250px" height="150px"></div>
             <div class="coursecontent col-md-8"><h3>1. Random Objects/Items</h3></div>
             <div class="lock col-md-1 row"><a class="col btn btn-default">Take Test</a></div>
@@ -122,6 +128,13 @@
     <div id="footer">
       Contact us : info@empowerk12.com
     </div>
+
+    <script type="text/javascript">
+        $('iframe').on('click',function(event){
+            console.log("video clicked");
+            $(".video").css('width','1000');
+        });
+    </script>
 
 </body>
 </html>
