@@ -6,17 +6,15 @@
     /*box-sizing: border-box;
     outline: 1px solid red !important;*/
 }
-
 body::-webkit-scrollbar{
     display: none;
 }
-
 #bootstrapOverridenNavBar{
   margin:0;
   background-color: #00a087;
 }
-
 #footer{
+    margin-top: 50px;
     width: 100vw;
     height: 50px;
     color: gray;
@@ -25,7 +23,6 @@ body::-webkit-scrollbar{
     padding: 15px;
     /*position: relative;*/
 }
-
 #pageTitle{
     /*width: 100vw;
     height: 45vh;*/
@@ -38,13 +35,24 @@ body::-webkit-scrollbar{
     color: black;/*
     text-shadow: #000 3px 2px 2px;*/
 }
-
 #pageDescription{
-    margin-bottom: 30px;
+    text-align: center;
+}
+.spin{
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+.spin:hover{
+    -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.dim:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
-/*Login styling starts*/
 
+/*Login styling starts*/
 #login{
     width: 100vw;
     height: 100vh;
@@ -57,7 +65,6 @@ body::-webkit-scrollbar{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 #companyName{
     width: 100vw;
     height: 45vh;
@@ -69,46 +76,110 @@ body::-webkit-scrollbar{
     /*color: white;*/
     /*text-shadow: #000 3px 2px 2px;*/
 }
-
 #tagLine{
     text-align: center;
     font-size: 2vw;
     color: #ADD8E6;
     text-shadow: #000 3px 2px 2px;
 }
-
 #signInButton{
     text-align: center;
     padding: 1%;
 }
-
 #vision{
     width: 100vw;
     /*background-color: #DDE1E2;*/
 }
-
 #visionText{
     padding: 18%;
     text-align: center;
     font-family: 'Poiret One';
 }
-
 #visionText h3{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
-
 #loaderImage{
-    width:6vw;
-    height:11vh;
+    width:3px;
+    height:6px;
 }
-
 #loaderIcon{
     width: 100vw;
     text-align: center;
     padding: 1%;
 }
+@media screen and (max-width: 800px)
+{
+    #companyName{font-size: 10vw;}
+    #tagLine{font-size: 3vw;}
+}
+@media screen and (max-width: 400px)
+{
+    #tagLine{font-size: 4vw;}
+}
 /*Login styling ends*/
+
+
+
+/* Courses styling starts*/
+#coursesCoverPic{
+    background-image: url('courses.jpg');
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+#coursesTD{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+#coursesFeatures{
+    width:100vw;
+    padding: 3%;
+    margin-bottom: 150px;
+    background-color: #222222;
+}
+#coursesFeatures h3, #coursesFeatures p, #coursesFeatures div div div{
+    width:100%;
+    text-align: center;
+    align-content: center;
+    padding:3px;
+}
+#coursesFeatures h3{
+    font-family: 'Raleway', sans-serif;
+    color: #F0EAEA;
+}
+#coursesFeatures p{
+    font-size: 18px;
+    color: #DAD3D3;
+}
+#coursesFeatures img{
+    width:100px;
+    height:100px;
+}
+#courses h3{
+    font-family: 'Raleway', sans-serif;
+}
+#course{
+    padding: 20px;
+}
+@media screen and (max-width: 700px)
+{
+    #coursesCoverPic{
+    height: 300px;
+}
+@media screen and (max-width: 400px)
+{
+    #coursesCoverPic{
+    height: 250px;
+}
+/*Courses styling ends*/
+
+
 
 /*MyAccount styling starts*/
 #myaccount{
@@ -195,8 +266,17 @@ body::-webkit-scrollbar{
 
 /*MyAccount styling ends*/
 
-/*Course styling starts*/
 
+
+/*Memory styling starts*/
+#memoryBackgroundWallpaper{
+    background-image: url("memory2.jpg");
+}
+#memoryCoverPic{
+    background-image: url('memory.jpg');
+    background-repeat: no-repeat;
+    height:400px;
+}
 #memoryTitle{
     /*width: 100vw;
     height: 45vh;*/

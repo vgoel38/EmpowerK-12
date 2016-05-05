@@ -4,78 +4,71 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width initial-scale=1">
+        <!--JS files!-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!--CS files-->
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <title>EmpowerK12</title>
+        <!--Fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/login">Empower K-12</a>
-                <!-- <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt="">
-                </a> -->
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-            <li><a href="/courses">Courses</a></li>
-            <li><a href="/myaccount">My Account</a></li>
-            <li><a href="/gdisconnect">Logout</a></li>
-          </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
 
-    <div style="background-image: url('static/courses.jpg'); width: 100%; height: 400px;">
-    </div>
+    <div id="coursesCoverPic"></div>
 
-    <div class="container">
+    <div id="coursesTD" class="container">
         <div id="pageTitle">
             <h1>Courses</h1>
         </div>
         <div class="container lead" id="pageDescription">
-            <p>We strive to deliver the best courses with best content. The courses have been developed with expertise and comprise hands-on approach. The courses have been tested and known to produce best results. Come, let's study together and have fun.</p>
+            <p>We strive to deliver our courses with best content. The courses have been developed with expertise and comprise hands-on approach. The courses have been tested and known to produce best results. Come, let's study together and have fun.</p>
+        </div>
+    </div>
+
+    <div id="coursesFeatures" class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div><img class="spin" src="static/expert-content.svg"></div><br>
+                <h3>Expert Content</h3><br>
+                <p class="lead">Our courses are complete in the sense that they cover each and every corner of the respective subject. The topics have been thoroughly researched and expertly handled during years of hard work
+                and dedication.<p>
+            </div>
+            <div class="col-md-4">
+                <div><img class="spin" src="static/hands-on.svg"></div><br>
+                <h3>Hand-On Approach</h3><br>
+                <p class="lead">We want to make learning as much fun as possible. And what better way than to have a practical approach. Each course is designed to give you maximum exposure on how to use the knowledge of the course in real world.<p>
+            </div>
+            <div class="col-md-4">
+                <div><img class="spin" src="static/just-for-you.svg"></div><br>
+                <h3>Just For You</h3><br>
+                <p class="lead">Each course is molded to make it just right for you. So, you do not need to worry if you will be able to grasp the course or not. We adopt such teaching methods that make the learning experience unique for each student.<p>
+            </div>
         </div>
     </div>
 
     <div id="courses" class="container">
-        <hr>
+    <h3>Choose from the following courses. More courses coming soon...</h3>
+    <hr>
         <div id="course" class="row">
-            <div class="courseImg col-md-3" ><img class="col" src="static/brain.png" width="250px" height="150px"></div>
+            <div class="courseImg col-md-3 dim" ><a href="{{url_for('showMemoryVideos')}}"><img class="col img-responsive" src="static/brain.png" width="250px" height="150px"></a></div>
             <div class="coursecontent col-md-9"><h3><a href="{{url_for('showMemoryVideos')}}"> Photographic Memory Course</a></h3><p>Improve your memory with photographic memory techniques.</p></div>
         </div>
         <hr>
-        <div id="course" class="row">
-            <div class="courseImg col-md-3" ><img class="col" src="static/webinar.png" width="250px" height="150px"></div>
-            <div class="coursecontent col-md-9"><h3><a href="{{url_for('showWebinars')}}">Webinars</a></h3><p>Take webinars right from your home or while commuting.</p></div>
+        <!-- <div id="course" class="row">
+            <div class="courseImg col-md-3" ><img class="col img-responsive" src="static/webinar.png" width="250px" height="150px"></div>
+            <div class="coursecontent col-md-9"><h3><a href="{{url_for('showWebinars')}}">Webinars</a></h3><p>Join webinars right from your home or while commuting.</p></div>
         </div>
-        <hr>
+        <hr> -->
         <div id="course" class="row">
-            <div class="courseImg col-md-3" ><img class="col" src="static/android.jpg" width="250px" height="150px"></div>
+            <div class="courseImg col-md-3 dim" ><a href="#"><img class="col img-responsive" src="static/android.jpg" width="250px" height="150px"></a></div>
             <div class="coursecontent col-md-9"><h3><a href="#">Android apps and games Deveopment Course</a></h3><p>Develop android apps and games in this incredible mobile app dvelopment course.</p></div>
         </div>
         <hr>
     </div>
 
-
-
-    <div id="footer">
-      Contact us : info@empowerk12.com
-    </div>
+    <script type="text/javascript" src="static/common.js"></script>
 
 </body>
 </html>

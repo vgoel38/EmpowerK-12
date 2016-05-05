@@ -8,18 +8,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="//apis.google.com/js/platform.js?onload=start"> </script>
   <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+  <!--CSS files-->
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <!--JS files-->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!--Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-  <title>Empower K-12</title>
+  <title>EmpowerK-12</title>
 
 </head>
 
 <body>
     <div id="login">
-        <h1 id="companyName">Empower K-12</h1>
+        <h1 id="companyName">EmpowerK-12</h1>
         <h4 id="tagLine">~empowering young minds~</h4>
         <!-- GOOGLE PLUS SIGN IN BUTTON-->
         <div id="signInButton">
@@ -32,11 +35,12 @@
             data-callback="signInCallback"
             data-approvalprompt="force">
             </span>
+            <!-- data-approvalprompt="force" -->
         </div>
         <!--END GOOGLE PLUS SIGN IN BUTTON -->
         <!--Loading icon -->
         <div id="loaderIcon">
-          <img id="loaderImage" src="static/loader_icon.gif">
+          <img id="loaderImage img-responsive" src="static/loader_icon.gif">
         </div>
         <!-- End of loading icon -->
     </div>
@@ -48,12 +52,12 @@
       <div class="lead" id="visionText">
         <h3> Our Vision</h3>
         <hr>
-        <p>We, at EmpowerK-12, strive towards achieving a nation where the youth is empowered. Our young minds need to be exposed to various opportunities to fathom their own capabilities. The present education system of our country follows a fixed conventional path walking on which may or may not lead to the next Steve Jobs or Bill Gates or our very own scientist APJ Abdul Kalam. What the youth need is motivation and skills to achieve dreams they might not even be aware of existing in their circle of achievability. EmpowerK-12 does exactly the same. We provide courses to help our children learn more, think out of the box and feel confidant in this competitive world. Empower K-12 thrives to make possible the possibilty of a better future of our children.</p>
+        <p>We, at EmpowerK-12, strive towards achieving a nation where the youth is empowered. Our young minds need to be exposed to various opportunities to fathom their own capabilities. The present education system of our country follows a fixed conventional path walking on which may or may not lead to a next Steve Jobs or Bill Gates. What the youth needs is motivation and skills to achieve dreams they might not even be aware of existing in their circle of achievability. EmpowerK-12 does exactly the same. We provide courses to help our children learn more, think out of the box and feel confidant in this competitive world. Empower K-12 thrives to make possible the possibilty of a better future of our children.</p>
       </div>
   </div>
 
   <div id="footer">
-      Contact us : info@empowerk12.com
+      Email us : info@empowerk12.com
   </div>
 
   <!-- Modal to display when user is unauthorrized-->
@@ -103,36 +107,14 @@
               200: function(response){
                 console.log("printing response:")
                 console.log(response);
-                // Hide the sign-in button now that the user is authorized
-                // $('#signInButton').attr('style', 'display: none');
-                // console.log("Login successful!");
-                // output = '';
-                // output += '<h1>Welcome, ';
-                // output += response['username'];
-                // output += '!</h1>';
-                // output += '<img src="';
-                // output += response['image_source'];
-                // output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> ';
-
-                // console.log(output);
-
-                // $('#result').html('Login Successful!</br>'+ output + '</br>Redirecting...')
-                //setTimeout(function() {window.location.href = "/memoryvideos";}, 4000);
                 window.location.href = "/courses";
               },
               201: function(response) {
                 console.log(response);
-                // Hide the sign-in button now that the user is authorized
-                // $('#signInButton').attr('style', 'display: none');
-                // $('#result').html('Login Successful!</br>'+ response + '</br>Redirecting...');
-                //setTimeout(function() {window.location.href = "/memoryvideos";}, 4000);
                 window.location.href = "/courses";
               },
               401: function(response) {
                 console.log(response);
-                // Hide the sign-in button now that the user is authorized
-                //$('#signInButton').attr('style', 'display: none');
-                //$('#result').html(response['responseText'])
                 $('#modal1').modal('show');
                 $('#signInButton').attr('style', 'display: visible');
                 $('#loaderIcon').attr('style', 'display: none');
@@ -141,11 +123,10 @@
           });
       }
       else if (authResult['error']) {
-          $('#result').html(result)
           console.log('There was an error: ' + authResult['error']);
       }
       else {
-          $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+          console.log('Failed to make a server-side call. Check your configuration and console.');
       }
     }
 

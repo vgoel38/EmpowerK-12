@@ -1,46 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <title>EmpowerK12</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <!--JS files!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--CS files-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
 
-<body style="background-image: url('static/memory2.jpg');">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/login">Empower K-12</a>
-                <!-- <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt="">
-                </a> -->
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-            <li><a href="/courses">Courses</a></li>
-            <li><a href="/myaccount">My Account</a></li>
-            <li><a href="/gdisconnect">Logout</a></li>
-          </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div style="background-image: url('static/memory.jpg'); background-repeat: no-repeat; height:400px">
+<body>
+<div id="memoryBackgroundWallpaper" style="background-image: url('static/memory2.jpg');">
+    <div id="memoryCoverPic">
         <div id="memoryTitle">
             <h1>Photographic Memory Course</h1>
         </div>
@@ -131,10 +105,7 @@
     </div>
 
     <br><br><br><br>
-
-    <div id="footer">
-      Contact us : info@empowerk12.com
-    </div>
+</div>
 
     <script type="text/javascript">
         $('#one').on('click',function(event){
@@ -146,6 +117,8 @@
             $('iframe').attr("src","https://www.youtube.com/embed/X_q9IXvt3ro?enablejsapi=1&origin=http://example.com");
         });
     </script>
+
+    <script type="text/javascript" src="static/common.js"></script>
 
 </body>
 </html>
