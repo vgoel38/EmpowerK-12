@@ -171,11 +171,13 @@ body::-webkit-scrollbar{
 {
     #coursesCoverPic{
     height: 300px;
+    }
 }
 @media screen and (max-width: 400px)
 {
     #coursesCoverPic{
     height: 250px;
+    }
 }
 /*Courses styling ends*/
 
