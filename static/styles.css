@@ -14,7 +14,6 @@ body::-webkit-scrollbar{
   background-color: #00a087;
 }
 #footer{
-    margin-top: 50px;
     width: 100vw;
     height: 50px;
     color: gray;
@@ -30,7 +29,7 @@ body::-webkit-scrollbar{
     padding: 2%;
     /*display: table-cell;*/
     vertical-align: bottom;
-    font-size: 4vw;
+    font-size: 40px;
     text-align: center;
     color: black;/*
     text-shadow: #000 3px 2px 2px;*/
@@ -49,6 +48,14 @@ body::-webkit-scrollbar{
 .dim:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+.scrollbar::-webkit-scrollbar
+{
+    width: 5px;
+}
+.scrollbar::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
 }
 
 
@@ -276,7 +283,7 @@ body::-webkit-scrollbar{
 }
 #memoryCoverPic{
     background-image: url('memory.jpg');
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     height:400px;
 }
 #memoryTitle{
@@ -291,14 +298,13 @@ body::-webkit-scrollbar{
     color: white;
     text-shadow: #000 3px 2px 2px;
 }
-
 #memoryDescription{
     color: white;
     text-shadow: #000 3px 2px 2px;
 }
-
 #memoryVideos {
-
+    /*background-image: url('memory3.jpg');*/
+    background-color: #222222;
     margin-top: 5%;
     margin-bottom: 5%;
     /*margin-left: 27%;*/
@@ -306,34 +312,105 @@ body::-webkit-scrollbar{
     align-content: center;
     -webkit-align-content: center;
 }
-
-.rowTop{
-    margin-top: 5%;
+#memoryVideos h2{
+    font-family: 'Raleway', sans-serif;
+    color: white;
 }
-
-.iframeLeft{
-    width:300px;
-    height:200px;
-    margin-left: 15%;
-    margin-right: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+#memoryVideosScroll{
+    overflow-y:scroll;
+    height:500px;
 }
-
-.iframeRight{
-    width:300px;
-    height:200px;
-    margin-left: 5%;
-    margin-right: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    float: right;
+.memoryVideo{
+    /*width:100px;
+    height:60px;*/
 }
-
-.rowBottom{
-    margin-bottom: 5%;
+.videoTitle{
+    margin-left: 10px;
+    color: white;
 }
-
+#quotes h3, #quotes p{
+    color: white;
+}
+#memoryNote{
+    background-color: gray;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding:20px;
+    color: black;
+}
+@media screen and (min-width: 1200px)
+{
+    .memoryVT{
+    display: flex; cursor: pointer;
+    }
+}
+@media screen and (max-width: 1200px)
+{
+    #memoryVideos iframe{
+        margin-left:20%;
+        margin-bottom: 10%;
+    }
+    #memoryVideosScroll{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex: flex-wrap;
+    }
+    .memoryVideo img, .memoryVT{
+        width: 200px;
+        height:120px;
+        margin:10px;
+        text-align: center;
+    }
+    #quotes{
+        display: none;
+    }
+}
+@media screen and (max-width: 992px)
+{
+    #memoryVideos iframe{
+        margin-left:12%;
+    }
+}
+@media screen and (max-width: 770px)
+{
+    #memoryVideos iframe{
+        width:400px;
+        height:300px;
+        margin-left:20%;
+    }
+}
+@media screen and (max-width: 670px)
+{
+    #memoryVideos iframe{
+        width:300px;
+        height:200px;
+        margin-left:25%;
+    }
+}
+@media screen and (max-width: 570px)
+{
+    #memoryVideos iframe{
+        width:300px;
+        height:200px;
+        margin-left:20%;
+    }
+}
+@media screen and (max-width: 470px)
+{
+    #memoryVideos iframe{
+        width:250px;
+        height:200px;
+        margin-left:20%;
+    }
+}
+@media screen and (max-width: 410px)
+{
+    #memoryVideos iframe{
+        width:250px;
+        height:200px;
+        margin-left:13%;
+    }
+}
 /*Course styling ends*/
 
 /*21 days worksop styling begins*/
@@ -374,6 +451,10 @@ body::-webkit-scrollbar{
 /*21 days worksop styling ends*/
 
 /*webinars styling beings*/
+#webinarsBackgroundWallpaper{
+    background-image: url('webinars.jpg');
+    background-repeat: repeat;
+}
 
 #webinars{
     width: 70%;
@@ -386,11 +467,25 @@ body::-webkit-scrollbar{
 #webinarTitle{
     /*width: 100vw;
     height: 45vh;*/
-    margin: 51px;
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 30px;
     padding: 2%;
     /*display: table-cell;*/
     vertical-align: bottom;
-    font-size: 4vw;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    text-shadow:
+    3px 3px 0 #000,
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+#webinarDescription{
+    color: white;
     text-align: center;
 }
 

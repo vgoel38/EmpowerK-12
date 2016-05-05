@@ -10,26 +10,23 @@
     <!--CS files-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-<div id="memoryBackgroundWallpaper" style="background-image: url('static/memory2.jpg');">
+<div id="memoryBackgroundWallpaper">
     <div id="memoryCoverPic">
         <div id="memoryTitle">
             <h1>Photographic Memory Course</h1>
         </div>
         <div class="container lead" id="memoryDescription">
-            <p>There are many times when your memory fails you. And most of those crucial moments make up a student's life. Be it written exams or a poem recitation, be it learning the seemingly impossible to retain history dates or be it all the names of your body organs, you need a good memory. But what if you could improve your results with some memoriztion techniques and surprise your peers? Empower K-12 presents you the memory enhancement course.</p>
+            <p>There are many times when your memory fails you. And most of those crucial moments make up a student's life. Be it writing a science exam or reciting a long difficult poem, learning too many history dates or memorizing all the names of your body organs, you need a good memory. But what if you could improve your results with some memorization techniques and surprise your peers? We present you the photographic memory course.</p>
         </div>
     </div>
 
-    <!-- <div id="memoryVideos" class="container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLaGkcEAhgIRspbFQJHXX-og0wCkeUSNvc" frameborder="0" allowfullscreen></iframe>
-
-        <br>
-
-        <a class="btn btn-default" href="../static/amy.pdf" download>Download pdf</a>
-    </div> -->
+    <br><br><br>
 
     <div id="memoryVideos" class="container">
     <h2>How to memorize....</h2>
@@ -37,88 +34,95 @@
         <br>
         <div class="row">
 
-            <div class="col-md-3" style="overflow:scroll; height:500px;">Videos
-                <!-- <div class="container"> -->
-                    <div id="one" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">1. Random Objects/Items</p></div>
+            <div class="col-lg-6 col-lg-push-3" id="videoPlayer">
+                <iframe style="margin-top: 30px; border-right: black" id="player" type="text/html" allowfullscreen="allowfullscreen" width="550" height="400" src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com" frameborder="0"></iframe>
+                <!-- <div class="lock col-md-1 row" style="width: 100%;"><a href="static/amy.pdf" download="Random Objects/Items Test.pdf" class="col btn btn-default">Take Test</a></div>-->
+            </div>
+
+
+            <div class="scrollbar col-lg-3 col-lg-pull-6" id="memoryVideosScroll">
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">1. Random Objects/Items</div>
                     </div>
                     <br>
-                    <div id="two" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">2. Random Words</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">2. Random Words</div>
                     </div>
                     <br>
-                    <div class="" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">3. Vocabulary</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">3. Vocabulary</div>
                     </div>
                     <br>
-                    <div class="" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">4. Dates</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">4. Dates</div>
                     </div>
                     <br>
-                    <div class="" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">5. Short Answers</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">5. Short Answers</div>
                     </div>
                     <br>
-                    <div class="" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">6. Long Answers</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">6. Long Answers</div>
                     </div>
                     <br>
-                    <div class="" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">7. Keywords</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">7. Keywords</div>
                     </div>
                     <br>
-                    <div class="" style="display: flex; cursor: pointer;">
-                        <div class="courseImg" ><img src="static/video-sample.jpg" width="100px" height="60px"></div>
-                        <div class="coursecontent"><p style="margin-left: 10px">8. English Literature</p></div>
+                    <div class="memoryVT">
+                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
+                        <div class="videoTitle">8. English Literature</div>
                     </div>
                     <br>
             </div>
 
 
-            <div class="col-md-6">
-            <iframe style="margin-top: 30px; border-right: black" id="player" type="text/html" allowfullscreen="allowfullscreen" width="550" height="400" src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com" frameborder="0"></iframe>
-            <div class="lock col-md-1 row" style="width: 100%;"><a href="static/amy.pdf" download="Random Objects/Items Test.pdf" class="col btn btn-default">Take Test</a></div>
+            <div class="col-lg-3" id="quotes">
+                <h3>Quotes of the Day:</h3>
+                <p>An apple a day keeps the doctor away.</p>
             </div>
-
-
-            <div class="col-md-3">
-                <h3>Quote of the Day:</h3><p>An apple a day keeps the doctor away.</p>
-            </div>
-
 
         </div>
         <hr>
     </div>
 
-    <div id="21days" class="container">
-        <div>
-            <h3 id="pageTitle"><a href="/memoryworkshop">The 21-Days Memory Workshop</a></h3>
-            <p class="container lead" id="pageDescription">Have you already gone through our free set of videos? We hope your memory gears have been oiled enough to surprise your peers. But how about a free new amazing workshop as well? We present you an expertly crafted workshop which is spread in only 21 days to hone your photographic memory skills. Each day you will learn a new concept, practise on it and unlock the next day's material. Don't worry, you only need to spend less than an hour everyday to master the particular skill. So, are you ready for some magic?</p>
-        </div>
+    <br><br>
+
+    <div class="container lead" id="memoryNote">
+        <p>NOTE : Hey guys. A very important thing. We constantly keep generating and posting new amazing content just for you on our website right here on this page. We make new videos and post them here, we come up with amazing webinars related to Photographic Memory Course and other courses, we keep posting new online/offline exams to test your progress and links to other incredible knowledge resources. Therefore, we highly advise you to keep checking this space for new stuff. Let's grow awesome together!</p>
     </div>
 
     <br><br><br><br>
+
+    <!-- <div id="21days" class="container">
+    <h3>Coming Soon...</h3>
+    <hr>
+        <div>
+            <h4 id="pageTitle">The 21-Days Memory Workshop</h4>
+            <p class="container lead" id="pageDescription">Have you already gone through our free set of videos? We hope your memory gears have been oiled enough to surprise your peers. But how about a free new amazing workshop as well? We present you an expertly crafted workshop which is spread in only 21 days to hone your photographic memory skills. Each day you will learn a new concept, practise on it and unlock the next day's material. Don't worry, you only need to spend less than an hour everyday to master the particular skill. So, are you ready for some magic?</p>
+        </div>
+    </div> -->
 </div>
 
-    <script type="text/javascript">
-        $('#one').on('click',function(event){
-            console.log("one");
-            $('iframe').attr("src","http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com");
-        });
-        $('#two').on('click',function(event){
-            console.log("two");
-            $('iframe').attr("src","https://www.youtube.com/embed/X_q9IXvt3ro?enablejsapi=1&origin=http://example.com");
-        });
-    </script>
+<script type="text/javascript">
+    $('#one').on('click',function(event){
+        console.log("one");
+        $('iframe').attr("src","http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com");
+    });
+    $('#two').on('click',function(event){
+        console.log("two");
+        $('iframe').attr("src","https://www.youtube.com/embed/X_q9IXvt3ro?enablejsapi=1&origin=http://example.com");
+    });
+</script>
 
-    <script type="text/javascript" src="static/common.js"></script>
+<script type="text/javascript" src="static/common.js"></script>
 
 </body>
 </html>
