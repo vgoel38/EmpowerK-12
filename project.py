@@ -120,6 +120,7 @@ def gconnect():
     user_id = getUserID(login_session['email'])
     print login_session['email']
     if not user_id:
+        print "accessing/making organic id"
         organic_user_id = getOrganicUserID(login_session['email'])
         if not organic_user_id:
             createOrganicUser(login_session)
