@@ -41,12 +41,12 @@
 
 
             <div class="scrollbar col-lg-3 col-lg-pull-6" id="memoryVideosScroll">
-                    <div class="memoryVT">
+                    <div class="memoryVT" id="one">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
                         <div class="videoTitle">1. Random Objects/Items</div>
                     </div>
                     <br>
-                    <div class="memoryVT">
+                    <div class="memoryVT" id="two">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
                         <div class="videoTitle">2. Random Words</div>
                     </div>
@@ -118,7 +118,7 @@
     });
     $('#two').on('click',function(event){
         console.log("two");
-        $('iframe').attr("src","https://www.youtube.com/embed/X_q9IXvt3ro?enablejsapi=1&origin=http://example.com");
+        $('iframe').attr("src","https://player.vimeo.com/video/131058963");
     });
 </script>
 
