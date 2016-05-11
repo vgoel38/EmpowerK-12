@@ -23,9 +23,9 @@ session = DBSession()
 # session.add(Institution1)
 # session.commit()
 
-User1 = User(email="harshita.r17@mhrod.in")
-session.add(User1)
-session.commit()
+# User1 = User(email="vishal@cocatalyst.in")
+# session.add(User1)
+# session.commit()
 
 # user = session.query(User).all()
 # for u in user:
