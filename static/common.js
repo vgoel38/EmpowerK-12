@@ -1,4 +1,4 @@
-var title = '<title>EmpowerK-12</title>';
+var title = '<title>CoCatalyst</title>';
 var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">'+
                         '<div class="container">'+
                         '<!-- Brand and toggle get grouped for better mobile display -->'+
@@ -29,7 +29,7 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                     '</nav>';
 
 var footer = '<div id="footer">'+
-             'Contact us : info@empowerk12.com'+
+             'Contact us : support@cocatalyst.com'+
              '</div>';
 
 $('head').append(title);
