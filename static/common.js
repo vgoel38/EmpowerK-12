@@ -9,7 +9,7 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                                     '<span class="icon-bar"></span>'+
                                     '<span class="icon-bar"></span>'+
                                 '</button>'+
-                                '<a class="navbar-brand" href="/login">Empower K-12</a>'+
+                                '<a class="navbar-brand" href="/login">CoCatalyst</a>'+
                                 '<!-- <a class="navbar-brand" href="#">'+
                                     '<img src="http://placehold.it/150x50&text=Logo" alt="">'+
                                 '</a> -->'+
@@ -29,7 +29,7 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                     '</nav>';
 
 var footer = '<div id="footer">'+
-             'Contact us : support@cocatalyst.com'+
+             'Email us : support@cocatalyst.com'+
              '</div>';
 
 $('head').append(title);

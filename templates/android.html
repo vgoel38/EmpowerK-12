@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <!--JS files!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--CS files-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.featurette').each( function(i){
+
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1','margin-top':'0px'},500);
+
+            }
+
+        });
+
+    });
+
+});
+</script>
+</head>
+
+<body id="androidBackgroundColour2">
+
+    <!-- Full Width Image Header -->
+    <header id="android-image">
+        <div id="androidTitle">
+            <div class="container">
+                <h1>Android Apps and Games Development Course</h1>
+            </div>
+        </div>
+    </header>
+
+<div id="androidBackgroundColour1">
+    <div class="container lead" id="androidDescription">
+        <!-- <hr> -->
+        <br><br><br><br>
+        <p>Do you use mobile apps in your day to day life? Do you like playing fun android games on your phone? Do you use google maps to find the location of your friend's house or use the notes app to plan your daily activities? What if you could build those apps on your own, put them on appstore and see hundreds of people downloading your app!!!</p>
+        <br>
+        <h1>Welcome to the World of Android Apps!</h1>
+        <br><br>
+        <p>With Cocatalyst, learn to build android apps and games the fun and easy way. Join our exclusive course at your school and become a young developer. Build amazing and various types of apps. Be it racing game, or a utility app like a small calculator or how about a shooting game? ooh! Exciting, isn't it? Well, what are you waiting for? Check out the features of our classroom program below...</p>
+        <hr>
+        <br>
+    </div>
+</div>
+
+    <!-- Page Content -->
+<div id="androidBackgroundColour2">
+    <div class="container">
+
+        <!-- <hr class="featurette-divider"> -->
+
+        <!-- First Featurette -->
+        <div class="featurette">
+            <img class="featurette-image img-circle img-responsive pull-right" src="static/flappyandroid.gif" style="width:250px;height:300px;">
+            <h1 class="featurette-heading">Learn to build
+                <span class="differentText">Awesome Apps</span>
+            </h1>
+            <p class="lead">
+                <ul>
+                    <li>Your own games - Racing, Strategy, Shooting, etc.</li>
+                    <li>Educational apps - for revision, question banks, quizzes.</li>
+                    <li>Cool Technological apps - using GPS, Internet, etc.</li>
+                </ul>
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette">
+            <img class="featurette-image img-circle img-responsive pull-left" src="static/school.jpg" style="width:350px;height:300px;">
+            <h2 class="featurette-heading">At your
+                <span class="differentText">Own School</span>
+            </h2>
+            <p class="lead">We deliver the course right in the computer lab of your school. You do not have to worry about coming anywhere else to study the course.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette">
+            <img class="featurette-image img-responsive pull-right" src="static/flexible.jpg" style="width:300px;height:200px;">
+            <h2 class="featurette-heading">Taught at
+                <span class="differentText">Flexible Timings</span>
+            </h2>
+            <p class="lead">We make sure that our course classes never clashes with your school classes. Therefore, we hold the classes during holidays or before/after school hours. It is all flexible and timings are decided only after input from school students, teachers and parents.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Fourth Featurette -->
+        <div class="featurette">
+            <img class="featurette-image img-responsive pull-left" src="static/expert.jpg" style="width:200px;height:300px;">
+            <h2 class="featurette-heading">Delivered by
+                <span class="differentText">Experts</span>
+            </h2>
+            <p class="lead">We are experts at dealing with all kinds of students and are trained at android app development. We mold the course according to the students' needs and thus deliver the best result possible.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <br><br><br><br>
+    </div>
+</div>
+    <!-- /.container -->
+
+<script type="text/javascript" src="static/common.js"></script>
+<script type="text/javascript">
+    // $(document).ready(function(){  // $(document).ready shorthand
+    //     $('.featurette').hide().fadeIn('slow');
+    // });
+</script>
+
+</body>
+</html>

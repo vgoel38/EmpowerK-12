@@ -273,6 +273,13 @@ def showWebinars():
         return redirect('/login')
     return render_template('webinars.html')
 
+#android
+@app.route('/android')
+def showAndroid():
+    if 'username' not in login_session:
+        return redirect('/login')
+    return render_template('android.html')
+
 
 if __name__ == '__main__':
     app.debug = True
