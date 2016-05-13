@@ -208,7 +208,7 @@ def gdisconnect():
     elif statusCode == '401':
         response = make_response(json.dumps('Current user not connected.'), 401)
         response.headers['Content-Type'] = 'application/json'
-    else:
+    elif statusCode == '400':
         response = make_response(json.dumps('Failed to revoke token for given user.'), 400)
         response.headers['Content-Type'] = 'application/json'
 
@@ -237,11 +237,11 @@ def userUnautorizedAccess():
 
 
 #User Account Details
-@app.route('/myaccount')
-def showAccountDetails():
-    if 'username' not in login_session:
-        return redirect('/login')
-    return render_template('myaccount.html', name=login_session['username'], picture=login_session['picture'], email=login_session['email'])
+# @app.route('/myaccount')
+# def showAccountDetails():
+#     if 'username' not in login_session:
+#         return redirect('/login')
+#     return render_template('myaccount.html', name=login_session['username'], picture=login_session['picture'], email=login_session['email'])
 
 
 #Memory Videos

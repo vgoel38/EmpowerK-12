@@ -19,7 +19,7 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                                 '<ul class="nav navbar-nav navbar-right">'+
                             '<li><a href="/courses">Courses</a></li>'+
                             '<li><a href="/webinars">Webinars</a></li>'+
-                            '<li><a href="/myaccount">My Account</a></li>'+
+                            // '<li><a href="/myaccount">My Account</a></li>'+
                             '<li><a href="/gdisconnect">Logout</a></li>'+
                           '</ul>'+
                             '</div>'+
