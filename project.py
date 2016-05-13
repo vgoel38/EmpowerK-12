@@ -196,7 +196,7 @@ def deleteSessionDetails():
     return result['status']
 
 
-@app.route('/gdisconnect')
+@app.route('/logout')
 def gdisconnect():
 
     statusCode = deleteSessionDetails()
@@ -212,9 +212,7 @@ def gdisconnect():
         response = make_response(json.dumps('Failed to revoke token for given user.'), 400)
         response.headers['Content-Type'] = 'application/json'
 
-    return response
-
-    #return render_template('goodbye.html', response = response)
+    return render_template("logout.html", response=response)
 
 
 def userUnautorizedAccess():

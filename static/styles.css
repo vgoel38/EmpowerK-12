@@ -555,6 +555,27 @@ body::-webkit-scrollbar{
     height: 200px;
 }
 
+@media(max-width:600px) {
+    #liveWebinar iframe{
+        width:400px;
+        height:300px;
+    }
+}
+
+@media(max-width:500px) {
+    #liveWebinar iframe{
+        width:300px;
+        height:200px;
+    }
+}
+
+@media(max-width:340px) {
+    #liveWebinar iframe{
+        width:250px;
+        height:150px;
+    }
+}
+
 /*webinars styling ends*/
 
 /*android styling starts*/

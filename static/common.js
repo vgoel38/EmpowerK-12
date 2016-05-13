@@ -20,7 +20,7 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                             '<li><a href="/courses">Courses</a></li>'+
                             '<li><a href="/webinars">Webinars</a></li>'+
                             // '<li><a href="/myaccount">My Account</a></li>'+
-                            '<li><a href="/gdisconnect">Logout</a></li>'+
+                            '<li><a href="/logout">Logout</a></li>'+
                           '</ul>'+
                             '</div>'+
                             '<!-- /.navbar-collapse -->'+
