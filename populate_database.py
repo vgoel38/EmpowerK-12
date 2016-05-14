@@ -35,10 +35,10 @@ session = DBSession()
 #     session.add(User1)
 #     session.commit()
 
-user = session.query(User).filter_by(email="vishal@cocatalyst.in")
-for u in user:
-     session.delete(u)
-session.commit()
+# user = session.query(User).filter_by(email="vishal@cocatalyst.in")
+# for u in user:
+#      session.delete(u)
+# session.commit()
 
 user = session.query(User).all()
 for u in user:
