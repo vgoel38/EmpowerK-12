@@ -29,7 +29,7 @@ class User(Base):
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True)
-    email = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False, primary_key=True)
     name = Column(String(250))
     gender = Column(String(10))
     picture = Column(String(250))

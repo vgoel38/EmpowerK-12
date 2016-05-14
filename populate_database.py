@@ -27,10 +27,18 @@ session = DBSession()
 # session.add(User1)
 # session.commit()
 
-# user = session.query(User).all()
-# for u in user:
-#      session.delete(u)
-# session.commit()
+# file = open('subscribersList.txt','r')
+# subscribers = file.read().splitlines()
+# for subscriber in subscribers:
+#     temp = subscriber
+#     User1 = User(email=subscriber)
+#     session.add(User1)
+#     session.commit()
+
+user = session.query(User).filter_by(email="vishal@cocatalyst.in")
+for u in user:
+     session.delete(u)
+session.commit()
 
 user = session.query(User).all()
 for u in user:
