@@ -23,9 +23,9 @@ session = DBSession()
 # session.add(Institution1)
 # session.commit()
 
-# User1 = User(email="vivek@cocatalyst.in")
-# session.add(User1)
-# session.commit()
+User1 = User(email="manishadish@gmail.com")
+session.add(User1)
+session.commit()
 
 # file = open('subscribersList.txt','r')
 # subscribers = file.read().splitlines()
