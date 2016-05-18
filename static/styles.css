@@ -90,6 +90,10 @@ body::-webkit-scrollbar{
     text-shadow: #000 1px 1px 3px;
     font-family: 'Raleway', sans-serif;
 }
+#register{
+    text-align: center;
+    padding: 1%;
+}
 #signInButton{
     text-align: center;
     padding: 1%;
