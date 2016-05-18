@@ -33,7 +33,7 @@
     </div>
 
     <div id="memoryVideos" class="container">
-    <!-- <h2>How to memorize....</h2> -->
+    <h2>E-Library</h2>
         <hr>
         <br>
         <div class="row">
@@ -45,7 +45,7 @@
 
 
             <div class="scrollbar col-lg-3 col-lg-pull-6" id="memoryVideosScroll">
-                    <div class="memoryVT" id="one">
+                    <div class="memoryVT" id="one" style="background-color:#302F2E">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
                         <div class="videoTitle">1. Converting Words to Pictures I</div>
                     </div>
@@ -55,6 +55,8 @@
                         <div class="videoTitle">2. Converting Words to Pictures II</div>
                     </div>
                     <br>
+                    <h5 style="color:white">Releasing shortly..</h5>
+                    <hr>
                     <div class="memoryVT">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
                         <div class="videoTitle">3. Vocabulary</div>
@@ -118,9 +120,14 @@
 </div>
 
 <script type="text/javascript">
+
+    var prevClickedVideo="#one";
+
     $('#one').on('click',function(event){
         console.log("one");
-        // $('#one').attr("background-color","#62605F");
+        $(prevClickedVideo).css("background-color","#222222");
+        $('#one').css("background-color","#302F2E");
+        prevClickedVideo="#one";
         $('iframe').attr(
             {
                 "id":"vzvd-7043967",
@@ -132,6 +139,9 @@
     });
     $('#two').on('click',function(event){
         console.log("two");
+        $(prevClickedVideo).css("background-color","#222222");
+        $('#two').css("background-color","#302F2E");
+        prevClickedVideo="#two";
         $('iframe').attr(
             {
                 "id":"vzvd-7110195",

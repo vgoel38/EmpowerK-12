@@ -1,4 +1,25 @@
 var title = '<title>CoCatalyst</title>';
+var styles = '<style>'+
+                '.navLink:hover{'+
+                    'background-color:#52504E'+
+                '}'+
+                '.dropdown{'+
+                    'position: relative;'+
+                    'display: inline-block;'+
+                '}'+
+                '.dropdown-content {'+
+                    'display: none;'+
+                    'position: absolute;'+
+                    'background-color: #222222;'+
+                    'min-width: 250px;'+
+                    'box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);'+
+                    'padding: 12px 16px;'+
+                    'z-index: 1;'+
+                '}'+
+                '.dropdown:hover .dropdown-content{'+
+                    'display: block;'+
+                '}'+
+             '</style>';
 var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">'+
                         '<div class="container">'+
                         '<!-- Brand and toggle get grouped for better mobile display -->'+
@@ -17,11 +38,19 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                             '<!-- Collect the nav links, forms, and other content for toggling -->'+
                             '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">'+
                                 '<ul class="nav navbar-nav navbar-right">'+
-                            '<li><a href="/courses">Courses</a></li>'+
-                            '<li><a href="/webinars">Webinars</a></li>'+
-                            // '<li><a href="/myaccount">My Account</a></li>'+
-                            '<li><a href="/logout">Logout</a></li>'+
-                          '</ul>'+
+                                    '<li class="navLink dropdown">'+
+                                        '<a href="/courses">Courses</a>'+
+                                            '<div class="dropdown-content">'+
+                                                '<ul class="nav navbar-nav">'+
+                                                '<li class="navLink"><a href="/memory">Photographic Memory Course</a></li>'+
+                                                '<li class="navLink"><a href="/android">Android Apps and Games Development</a></li>'+
+                                                '</ul>'+
+                                            '</div>'+
+                                    '</li>'+
+                                    '<li class="navLink"><a href="/webinars">Webinars</a></li>'+
+                                    // '<li class="navLink"><a href="/myaccount">My Account</a></li>'+
+                                    '<li class="navLink"><a href="/logout">Logout</a></li>'+
+                                '</ul>'+
                             '</div>'+
                             '<!-- /.navbar-collapse -->'+
                         '</div>'+
@@ -33,5 +62,6 @@ var footer = '<div id="footer">'+
              '</div>';
 
 $('head').append(title);
+$('head').append(styles);
 $('body').prepend(navigationbar);
 $('body').append(footer);
