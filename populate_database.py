@@ -23,9 +23,9 @@ session = DBSession()
 # session.add(Institution1)
 # session.commit()
 
-User1 = User(email="manishadish@gmail.com")
-session.add(User1)
-session.commit()
+# User1 = User(email="lrawat963@gmail.com")
+# session.add(User1)
+# session.commit()
 
 # file = open('subscribersList.txt','r')
 # subscribers = file.read().splitlines()
@@ -35,7 +35,7 @@ session.commit()
 #     session.add(User1)
 #     session.commit()
 
-# user = session.query(User).filter_by(email="vgoel38@gmail.com").first()
+# user = session.query(User).filter_by(email="ashi.mishra.dabbu@gmail.com").first()
 # # for u in user:
 # session.delete(user)
 # session.commit()
