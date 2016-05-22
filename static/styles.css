@@ -614,7 +614,7 @@ body::-webkit-scrollbar{
     vertical-align: center;
 }
 #androidDescription{
-    background-image: url('android2.png');
+    /*background-image: url('android2.png');*/
     text-align: center;
     margin-bottom: 100px;
     font-weight: 200;
