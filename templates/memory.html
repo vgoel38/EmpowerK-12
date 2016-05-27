@@ -29,62 +29,45 @@
     <br><br><br>
 
     <div class="container lead" id="memoryNote">
-        <p>NOTE 1 : Hey guys!! Did you like the memory workshop conducted at your school by Vivek sir? We are sure you did. Well how about you write to us about your experience of the Photographic Memory Workshop while we work towards the amazing webinar which we are going to host tomorrow? You can write your experience in around 100 words and email to us at contact@cocatalyst.in. We will showcase your experience on our offical blog. Do not forget to attach a nice picture of yours in the email. Cheers. :)</p>
+        <p>NOTE 1 : Hey guys!! Did you like the memory workshop conducted at your school by Vivek sir? We are sure you did. Well how about you write to us about your experience of the Photographic Memory Workshop? You can write your experience in around 100 words and email it to us at contact@cocatalyst.in. We will showcase your experience on our offical blog. Do not forget to attach a nice picture of yours in the email. Cheers. :)</p>
     </div>
 
     <div id="memoryVideos" class="container">
-    <h2>E-Library</h2>
+    <h2>PMC Library</h2>
         <hr>
         <br>
         <div class="row">
 
             <div class="col-lg-6 col-lg-push-3 container" id="videoPlayer">
-                <iframe id="vzvd-7043967" name="vzvd-7043967" title="vzaar video player" class="vzaar-video-player" type="text/html" width="550" height="310" frameborder="0" allowFullScreen allowTransparency="true" mozallowfullscreen webkitAllowFullScreen src="//view.vzaar.com/7043967/player"></iframe>
+                <iframe id="vzvd-7201260" name="vzvd-7201260" title="vzaar video player" class="vzaar-video-player" type="text/html" width="550" height="310" frameborder="0" allowFullScreen allowTransparency="true" mozallowfullscreen webkitAllowFullScreen src="//view.vzaar.com/7201260/player"></iframe>
                 <!-- <h3 class="lead" style="color: white;">Hola! The videos will be activated after the webinar. Hope you are ready for it. Click <a href="/webinars">here</a> to join the webinar.</h3> -->
             </div>
 
 
             <div class="scrollbar col-lg-3 col-lg-pull-6" id="memoryVideosScroll">
-                    <div class="memoryVT" id="one" style="background-color:#302F2E">
+                    <div class="memoryVT first" id="tmiv" style="background-color:#302F2E">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">1. Converting Words to Pictures I</div>
+                        <div class="videoTitle">1. The Most Important Video</div>
                     </div>
                     <br>
-                    <div class="memoryVT" id="two">
+                    <div class="memoryVT" id="basics">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">2. Converting Words to Pictures II</div>
+                        <div class="videoTitle">2. Basics</div>
                     </div>
                     <br>
-                    <h5 style="color:white">Releasing shortly..</h5>
-                    <hr>
-                    <div class="memoryVT">
+                    <div class="memoryVT" id="chaining">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">3. Vocabulary</div>
+                        <div class="videoTitle">3. Chaining</div>
                     </div>
                     <br>
-                    <div class="memoryVT">
+                    <div class="memoryVT" id="cwp1">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">4. Dates</div>
+                        <div class="videoTitle">4. Converting Words to Pictures I</div>
                     </div>
                     <br>
-                    <div class="memoryVT">
+                    <div class="memoryVT" id="cwp2">
                         <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">5. Short Answers</div>
-                    </div>
-                    <br>
-                    <div class="memoryVT">
-                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">6. Long Answers</div>
-                    </div>
-                    <br>
-                    <div class="memoryVT">
-                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">7. Keywords</div>
-                    </div>
-                    <br>
-                    <div class="memoryVT">
-                        <div class="memoryVideo" ><img src="static/video-sample.jpg" width="130px" height="80px"></div>
-                        <div class="videoTitle">8. English Literature</div>
+                        <div class="videoTitle">5. Converting Words to Pictures II</div>
                     </div>
                     <br>
             </div>
@@ -93,8 +76,8 @@
             <div class="col-lg-3" id="quotes">
                 <h3>Quote of the Day:</h3>
                 <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"> -->
-                <p><q>You have to dream before your dreams can come true.</q></p>
-                <div id="quoter">-A P J Abdul Kalam</div>
+                <p><q>Rahter than love, than money, than fame, give me truth.</q></p>
+                <div id="quoter">-Henry David Thoreau</div>
             </div>
 
         </div>
@@ -121,36 +104,53 @@
 
 <script type="text/javascript">
 
-    var prevClickedVideo="#one";
+    var prevClickedVideo=".first";
 
-    $('#one').on('click',function(event){
-        console.log("one");
+    function setVideo(currentVideo,key)
+    {
         $(prevClickedVideo).css("background-color","#222222");
-        $('#one').css("background-color","#302F2E");
-        prevClickedVideo="#one";
+        $(currentVideo).css("background-color","#302F2E");
+        prevClickedVideo=currentVideo;
         $('iframe').attr(
             {
-                "id":"vzvd-7043967",
-                "name":"vzvd-7043967",
-                "src":"//view.vzaar.com/7043967/player"
-
+                "id":"vzvd-"+key,
+                "name":"vzvd"+key,
+                "src":"//view.vzaar.com/"+key+"/player"
             }
         );
-    });
-    $('#two').on('click',function(event){
-        console.log("two");
-        $(prevClickedVideo).css("background-color","#222222");
-        $('#two').css("background-color","#302F2E");
-        prevClickedVideo="#two";
-        $('iframe').attr(
-            {
-                "id":"vzvd-7110195",
-                "value":"vzvd-7110195",
-                "src":"//view.vzaar.com/7110195/player"
+    }
 
-            }
-        );
+    $('#tmiv').on('click',function(event){
+        var currentVideo = "#tmiv";
+        var key = "7201260";
+        setVideo(currentVideo,key);
     });
+
+    $('#basics').on('click',function(event){
+        var currentVideo = "#basics";
+        var key = "7201140";
+        setVideo(currentVideo,key);
+    });
+
+    $('#chaining').on('click',function(event){
+        var currentVideo = "#chaining";
+        var key = "7201184";
+        setVideo(currentVideo,key);
+    });
+
+    $('#cwp1').on('click',function(event){
+        var currentVideo = "#cwp1";
+        var key = "7043967";
+        setVideo(currentVideo,key);
+    });
+
+    $('#cwp2').on('click',function(event){
+        var currentVideo = "#cwp2";
+        var key = "7110195";
+        setVideo(currentVideo,key);
+    });
+
+
 </script>
 
 <script type="text/javascript" src="static/common.js"></script>
