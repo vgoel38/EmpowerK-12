@@ -757,3 +757,41 @@ body::-webkit-scrollbar{
 }
 /*android styling ends*/
 
+
+/*FAQs styling starts*/
+
+#faqsWallpaper{
+    background-image: url('faqs.jpg');
+}
+
+#FaqsTitle{
+    /*width: 100vw;
+    height: 45vh;*/
+    margin: 70px;
+    padding: 2%;
+    /*display: table-cell;*/
+    vertical-align: bottom;
+    font-size: 40px;
+    text-align: center;
+    color: black;/*
+    text-shadow: #000 3px 2px 2px;*/
+}
+
+.ques{
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+    -webkit-text-stroke-width: 0.5px;
+   -webkit-text-stroke-color: black;
+
+}
+
+.ans{
+    font-size: 20px;
+    color: green;
+    -webkit-text-stroke-width: 0.5px;
+   -webkit-text-stroke-color: black;
+}
+
+/*FAQs styling ends*/
+

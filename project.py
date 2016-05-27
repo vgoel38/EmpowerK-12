@@ -278,6 +278,13 @@ def showAndroid():
         return redirect('/login')
     return render_template('android.html')
 
+#faqs
+@app.route('/faqs')
+def showFaqs():
+    if 'username' not in login_session:
+        return redirect('/login')
+    return render_template('faqs.html')
+
 
 if __name__ == '__main__':
     app.debug = True
