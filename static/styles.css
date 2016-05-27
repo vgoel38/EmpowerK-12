@@ -764,6 +764,10 @@ body::-webkit-scrollbar{
     background-image: url('faqs.jpg');
 }
 
+#faqsImage{
+    /*background-image: url('queswallpaper.jpg');*/
+}
+
 #FaqsTitle{
     /*width: 100vw;
     height: 45vh;*/
