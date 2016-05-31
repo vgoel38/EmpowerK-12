@@ -285,6 +285,14 @@ def showFaqs():
         return redirect('/login')
     return render_template('faqs.html')
 
+#certificate
+@app.route('/certificate')
+def showCertificate():
+    if 'username' not in login_session:
+        return redirect('/login')
+    return render_template('certificate.html', name=login_session['username'])
+
+
 
 if __name__ == '__main__':
     app.debug = True

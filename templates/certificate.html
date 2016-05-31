@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <!--JS files!-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="static/html2canvas.js"></script>
+        <script type="text/javascript" src="static/jquery.plugin.html2canvas.js"></script>
+        <script type="text/php" src="templates/save.php"></script>
+
+        <!--CS files-->
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!--Fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    </head>
+
+<body>
+
+<div id="snapshot">
+
+    <div class="certificate container border1">
+
+        <header>
+            <h1 class="certi-heading">Certificate of Completion</h1>
+        </header>
+
+        <p class="certi-text">This is to certify that </p>
+        <p class="certi-text "><u>{{name}} </u></p>
+        <p class="certi-text">has successfully completed the <!-- </p>
+        <p class="certi-text"> -->Photographic Memory Course </p>
+        <p class="certi-text">under CoCatalyst <!-- </p>
+        <p class="certi-text"> -->with amazing results.</p>
+
+        <div class="certi-footer">
+            <div class="certi-bottom">
+                <div class="certi-company">
+                    <div class="logo"><img class="logo-img img-responsive" src="static/logo.svg"></div>
+                </div>
+
+                <div class="certi-sign">
+                   <div class="logo"><img class="sign-img img-responsive" src="static/sign.jpg"></div>
+                </div>
+            </div>
+
+            <div class="certi-bottom">
+                <div class="certi-company">
+                    <div class="certi-company-name">CoCatalyst</div>
+                </div>
+
+                <div class="certi-sign">
+                    <!-- <div class="container"> -->
+                        <div class="certi-ceo"><div class="certi-ceo-name">Vivek Mehrotra</div></div>
+                        <div class="certi-ceo"><div class="certi-ceo-title">Founder and CEO</div></div>
+                    <!-- </div> -->
+                </div>
+
+                <!-- <div class="certi-sign container">>
+                        <div class="certi-sign row"><div class="col-md-12"><div class="certi-ceo-name">Vivek Mehrotra</div></div></div>
+                        <div class="certi-sign row"><div class="col-md-12"><div class="certi-ceo-title">Founder and CEO</div></div></div>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <br><br><br><br> -->
+
+    <!-- <script type="text/javascript" src="static/common.js"></script> -->
+
+<div>
+
+<!-- <input type="submit" value="Take Screenshot Of Div" onclick="capture();" />
+<form method="POST" enctype="multipart/form-data" action="save.php" id="myForm">
+    <input type="hidden" name="img_val" id="img_val" value="" />
+</form>
+
+<script type="text/javascript">
+    function capture() {
+    $('#snapshot').html2canvas({
+        onrendered: function (canvas) {
+            //Set hidden field's value to image data (base-64 string)
+            var dataUrl = canvas.toDataURL("image/png")
+            $('#img_val').val(dataUrl);
+            console.log($('#img_val').val());
+            //Submit the form manually
+            document.getElementById("myForm").submit();
+        }
+    });
+}
+</script> -->
+
+</body>
+</html>
