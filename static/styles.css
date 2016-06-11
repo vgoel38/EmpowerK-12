@@ -309,7 +309,7 @@ body::-webkit-scrollbar{
     text-shadow: #000 3px 2px 2px;
     text-align: center;
 }
-#memoryVideos {
+.black-container {
     /*background-image: url('memory3.jpg');*/
     background-color: #222222;
     margin-top: 5%;
@@ -319,13 +319,17 @@ body::-webkit-scrollbar{
     align-content: center;
     -webkit-align-content: center;
 }
-#memoryVideos h2{
+.black-container h2{
     font-family: 'Raleway', sans-serif;
     color: white;
 }
 #memoryVideosScroll{
     overflow-y:scroll;
     height:500px;
+}
+
+#videoPlayer {
+    text-align: center;
 }
 .memoryVideo{
     /*width:100px;
@@ -366,7 +370,7 @@ body::-webkit-scrollbar{
 }
 @media screen and (max-width: 1200px)
 {
-    #memoryVideos iframe{
+    #videoPlayer iframe{
         display: block;
         margin: 0 auto;
         margin-bottom: 10%;
@@ -389,7 +393,7 @@ body::-webkit-scrollbar{
 }
 @media screen and (max-width: 992px)
 {
-    #memoryVideos iframe{
+    #videoPlayer iframe{
         display: block;
         margin: 0 auto;
         margin-bottom: 70px;
@@ -417,7 +421,7 @@ body::-webkit-scrollbar{
 }*/
 @media screen and (max-width: 570px)
 {
-    #memoryVideos iframe{
+    #videoPlayer iframe{
         width:400px;
         height:350px;
         display: block;
@@ -427,7 +431,7 @@ body::-webkit-scrollbar{
 }
 @media screen and (max-width: 470px)
 {
-    #memoryVideos iframe{
+    #videoPlayer iframe{
         width:325px;
         height:250px;
         display: block;
@@ -450,7 +454,7 @@ body::-webkit-scrollbar{
 }
 @media screen and (max-width: 350px)
 {
-    #memoryVideos iframe{
+    #videoPlayer iframe{
         width:300px;
         height:200px;
         display: block;
