@@ -47,6 +47,7 @@ var navigationbar = '<nav class="navbar navbar-inverse navbar-fixed-top" role="n
                                                 '</ul>'+
                                             '</div>'+
                                     '</li>'+
+                                    '<li class="navLink"><a href="https://goo.gl/7nYdZT" target="_blank">Feedback</a></li>'+
                                     '<li class="navLink"><a href="/webinars">Webinars</a></li>'+
                                     '<li class="navLink"><a href="/faqs">FAQs</a></li>'+
                                     '<li class="navLink"><a href="/logout">Logout</a></li>'+
